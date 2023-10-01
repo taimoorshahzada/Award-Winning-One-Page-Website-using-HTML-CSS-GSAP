@@ -1,0 +1,146 @@
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #202020;
+  color: #c29277;
+}
+
+/* intro  */
+.intro {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 30;
+  width: 100%;
+  background-color: #202020;
+}
+.intro .images-shower {
+  width: 35vw;
+  position: relative;
+  height: fit-content;
+}
+.intro .introBlock {
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+  position: absolute;
+  top: 0;
+}
+#introBlock2 {
+  transform: translateY(100%);
+}
+.images-shower img {
+  width: 100%;
+  object-fit: contain;
+  transform: scale(1.05);
+}
+/* main-section  */
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container > img {
+  width: 90%;
+  padding: 20px;
+}
+.container > .text-section {
+  display: flex;
+  width: 55%;
+  height: fit-content;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+.text-section > .text {
+  font-family: "Reckless Neue";
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 90%;
+  width: fit-content;
+  padding: 0px 20px;
+}
+.text-section > .links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0px 10px;
+}
+.links li {
+  font-family: "Neutral Face";
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.container > .image-section {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: flex-end;
+  display: flex;
+  width: 45%;
+}
+.image-section > .image-marquee {
+  width: 90%;
+  display: flex;
+  box-sizing: border-box;
+  height: fit-content;
+  flex-direction: column;
+  overflow-y: hidden;
+  animation: scrollY 120s linear infinite;
+  white-space: nowrap;
+}
+.image-marquee > div {
+  position: relative;
+  width: 100%;
+  padding: 30px 0px;
+  overflow: hidden;
+  height: fit-content;
+}
+span {
+  display: block;
+  overflow: hidden;
+}
+.image-marquee > div > span > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.05);
+}
+.image-marquee .img-marquee-block {
+  width: 100%;
+  height: 100%;
+  background-color: #202020;
+  position: absolute;
+  top: 0;
+}
+.image-section > .vertical-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: fit-content;
+  font-family: "Neutral Face";
+  writing-mode: vertical-rl;
+  padding: 0px 20px;
+}
+
+@keyframes scrollY {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
